@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../source/headers/graphics.h
+
+/Users/azycat/CLionProjects/alterego/source/headers/stat.h
+assert.h
+-
+
+/Users/azycat/CLionProjects/alterego/source/src/graphics.cpp
+SDL2/SDL.h
+-
+graphics.h
+/Users/azycat/CLionProjects/alterego/source/src/graphics.h
+
+/Users/azycat/CLionProjects/alterego/source/src/main.cpp
+graphics.h
+/Users/azycat/CLionProjects/alterego/source/src/graphics.h
+
+/Users/azycat/CLionProjects/alterego/source/src/questions.cpp
+iostream
+-
+
+/Users/azycat/CLionProjects/alterego/source/src/stats.cpp
+../headers/stat.h
+/Users/azycat/CLionProjects/alterego/source/headers/stat.h
+
