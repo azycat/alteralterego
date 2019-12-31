@@ -1,6 +1,6 @@
 /*
  *  A stat has a value from 1-100,
- *  and a 2-3 letter string identifier.
+ *  and a string identifier.
  *  You will probably want the identifier to be unique, heh.
  */
 
@@ -29,8 +29,10 @@ public:
     std::string getName();
     void setValue(int newValue);
     void setName(std::string newName);
-
     void bumpValue(int bump);
+
+    void printValue();
+    void printName();
     //Stat(const std::string &ID, int n, std::string name);
     //Stat(Stat &copy);
     //~Stat();

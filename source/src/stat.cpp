@@ -1,6 +1,6 @@
 #include "stat.h"
 #include <string>
-#include <map>
+#include <stdio.h>
 
 /* Stat class
  * store and keeps track of stats in the Alter Ego game
@@ -45,13 +45,25 @@ void Stat::setName(std::string newName){
     this->_statName = newName;
 }
 
-// bumps stat value by a given positive or negative int. bumps to nearest max and min
-void bumpValue(int bump){
-    int currentValue = this->_statValue;
-
+// bumps stat value by a given positive or negative int. bumps to nearest max or min
+void Stat::bumpValue(int bump){
+    int newValue = (this->_statValue + bump);
+    if( newValue < 0 ) {
+        this->_statValue = 0;
+    } else if(newValue > this->MAX_VALUE){
+        this->_statValue = this->MAX_VALUE;
+    } else {
+        this->_statValue = newValue;
+    }
 }
 
+void Stat::printValue(){
+    printf("%", this->_statValue);
+}
 
+void Stat::printName(){
+    printf("%s", this->_statName.c_str());
+}
 
 /* makes a new stat with string identifier key, integer value from 0-100, and a name
 Stat::Stat(const std::string &ID, int n, std::string name){

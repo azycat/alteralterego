@@ -28,9 +28,11 @@ set(SOURCE_FILES
 
         ${AE_SRC}/stat.cpp
         ${AE_SRC}/questions.cpp
+        ${AE_SRC}/profile.cpp
         ${AE_HEAD}/stat.h
         ${AE_HEAD}/alterego_stats.h
-        ${AE_HEAD}/questions.h source/headers/profile.h)
+        ${AE_HEAD}/questions.h
+        ${AE_HEAD}/profile.h )
 
 # which files should produce executables
 add_executable(alterego ${SOURCE_FILES})
